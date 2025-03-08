@@ -15,10 +15,7 @@ root.render(
   <>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-
-
           <Routing />
-
       </BrowserRouter>
     </QueryClientProvider>
 

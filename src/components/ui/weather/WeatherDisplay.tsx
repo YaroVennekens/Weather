@@ -1,10 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { WeatherData } from "@/interface/WeatherData";
-import WeatherTabs from "./WeatherTabs";
 
-import BottomNavigation from "./BottomNavigation";
-import AdditionalWeatherInfo from '@/components/ui/AdditionalWeahterInfo.tsx'
+import { motion } from "framer-motion";
+import { WeatherData } from "@/interface/WeatherData.ts";
+import WeatherTabs from "./WeatherTabs.tsx";
+
+import BottomNavigation from "../BottomNavigation.tsx";
+import AdditionalWeatherInfo from '@/components/ui/weather/AdditionalWeahterInfo.tsx'
 
 interface WeatherDisplayProps {
     weatherData: WeatherData;
