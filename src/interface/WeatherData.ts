@@ -17,5 +17,4 @@ export interface WeatherData {
   lowTemp: number;
   hourlyForecast: HourlyForecast[];
   dailyForecast: DailyForecast[];
-  timezone: string;
 }

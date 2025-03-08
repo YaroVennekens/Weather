@@ -1,10 +1,11 @@
 export function getAirQualityText(value: number) {
-  if (value <= 3) return "Low Health Risk";
-  if (value <= 6) return "Moderate Health Risk";
-  if (value <= 9) return "High Health Risk";
-  return "Very High Health Risk";
+  if (value <= 50) return "Good";
+  if (value <= 100) return "Moderate";
+  if (value <= 150) return "Unhealthy for Sensitive Groups";
+  if (value <= 200) return "Unhealthy";
+  if (value <= 300) return "Very Unhealthy";
+  return "Hazardous";
 }
-
 export function getUVIndexText(value: number) {
   if (value <= 2) return "Low";
   if (value <= 5) return "Moderate";
