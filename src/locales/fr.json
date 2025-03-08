@@ -1,0 +1,18 @@
+{
+  "welcome": "Bienvenue sur mon site !",
+"description": "Ceci est une description.",
+"about-text": "Je m’appelle **Yaro Vennekens**, et j’ai **22 ans**. Je vis dans **la province d’Anvers en Belgique**. Actuellement, je poursuis mes études dans le programme  programmation @ **Thomas More**. Ma passion pour la technologie et le développement de logiciels me pousse à **approfondir mes connaissances et mes compétences**. En dehors de l’école, je suis un passionné de musique qui aime assister à des concerts et à des festivals.",
+"hero-text": "Je suis un **étudiant en programmation** à Thomas More à Geel. J’épanouis dans la transformation de concepts créatifs en réalité grâce à la programmation. J’aime me plonger dans divers projets, explorer de nouvelles technologies et apprendre constamment tout en construisant des solutions passionnantes et fonctionnelles.",
+"hallo": "Salut, je suis",
+  "contacteer mij": "Contactez-moi",
+  "naam": "Nom",
+  "email": "E-mail",
+  "bericht": "Message",
+  "verzend": "Envoyer",
+  "about": "à propos",
+  "coding": "codage",
+  "projects": "projets",
+  "coding text": "Voici quelques frameworks/langages avec lesquels j'ai travaillé",
+  "projects text": "Ce sont des projets que j'ai réalisés ou sur lesquels je travaille encore",
+  "hero subtitle": "J'aime créer quelque chose de temps en temps."
+}

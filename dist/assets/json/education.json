@@ -1,0 +1,56 @@
+[
+  {
+    "school": "Thomas More",
+    "duration": "2020 - 2024",
+    "location": "Geel",
+    "studies": [
+      {
+        "name": "Programming (Present - 2023)",
+        "link": "https://thomasmore.be/nl/opleidingen/graduaat/programmeren/geel/basistraject",
+        "description": [
+          "The Programming graduate program provides a broad foundation in software development.",
+          "Throughout this program, I have worked with various technologies and tools, including C# for object-oriented programming",
+          "and Unity projects, TypeScript and React for modern web applications, SQL for database management, and Astro for static site generation."
+        ]
+      }
+    ]
+  },
+  {
+    "school": "KSOM Campus Sint-Paulus",
+    "duration": "2023 - 2016",
+    "location": "Mol",
+    "studies": [
+      {
+        "name": "Se-N-Se car mechanics (2023 - 2022)",
+        "link": "https://sintpaulusinformeert.be/studieaanbod/opleidingen-auto/#autosense",
+        "description": [
+          "A deeper insight into automotive technology explores advanced vehicle systems, including engine performance, electric propulsion, autonomous driving, safety features, and sustainability. It focuses on innovations like AI, fuel efficiency, lightweight materials, and connectivity, shaping the future of transportation."
+        ]
+      },
+      {
+        "name": "Car Mechanics (2022 - 2020)",
+        "link": "https://sintpaulusinformeert.be/studieaanbod/opleidingen-auto/#autotechnieken",
+        "description": [
+          "Learning the basics of automotive mechanics involved examining",
+          "how an internal combustion engine is assembled, as well as observing various repairs."
+        ]
+      }
+    ],
+    "internships": [
+      {
+        "name": "BMW Sneyers Internship",
+        "link": "https://www.bmwsneyers.be",
+        "description": [
+          "An internship focused on working with BMW car technology, learning about electronic systems and diagnostics."
+        ]
+      },
+      {
+        "name": "Mercedes VDH Internship",
+        "link": "https://www.groepvdh.be",
+        "description": [
+          "An internship focused on repairing and maintaining Mercedes vehicles, including diagnostics and system repairs."
+        ]
+      }
+    ]
+  }
+]
