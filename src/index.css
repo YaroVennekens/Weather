@@ -10,8 +10,7 @@
 body {
     font-family: NTR, sans-serif;
     background: linear-gradient(to bottom, rgb(88 28 135), rgb(30 27 75));
-    background-size: 15px 15px;
-    color: white;
+
     scroll-behavior: smooth;
 
 }

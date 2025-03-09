@@ -21,7 +21,13 @@ const ConditionRenderer = ({ weatherData }: WeatherCloudProps) => {
     } else if (condition.includes("cloud")) {
         return <Cloud delay={0} size={220} opacity={0.5} y={15} />;
     } else {
-        return <Cloud delay={0} size={220} opacity={0.5} y={15} />;
+        return (<>
+
+              <Cloud delay={0.5} size={220} opacity={0.5} y={15} />
+             </>
+         )
+          ;
+
     }
 };
 
