@@ -14,7 +14,7 @@ export const fetchWeatherData = async (
   setLoading(true);
   try {
     const response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=${days}&hour=${hours}&aqi=yes`,
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=${days}&hour=${hours}&aqi=yes`,
     );
     const data = await response.json();
 
@@ -54,6 +54,8 @@ export const fetchWeatherData = async (
       pressure: data.current.pressure_mb,
       uvIndex: data.current.uv,
       airQuality: data.current.air_quality?.pm2_5 || 3,
+      visibility: data.current.vis_km,
+      windDirection: data.current.wind_dir,
       sunrise: data.forecast.forecastday[0].astro.sunrise,
       sunset: data.forecast.forecastday[0].astro.sunset,
       rainfall: data.current.precip_mm,

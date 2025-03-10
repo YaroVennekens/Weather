@@ -9,6 +9,8 @@ export interface WeatherData {
   windSpeed: number;
   pressure: number;
   uvIndex: number;
+  visibility: string,
+  windDirection: string
   airQuality: number;
   sunrise: string;
   sunset: string;

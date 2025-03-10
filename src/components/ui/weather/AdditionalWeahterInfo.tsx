@@ -10,7 +10,9 @@ interface AdditionalWeatherInfoProps {
     sunrise: string;
     sunset: string;
     windSpeed: number;
+    windDirection: number;
     rainfall: number;
+    visibility: number;
   };
 }
 
@@ -42,10 +44,22 @@ export default function AdditionalWeatherInfo({ weatherData }: AdditionalWeather
       gradient: "",
     },
     {
+      title: "Wind Direction",
+      value: `${weatherData.windDirection}°`,
+      icon: <span className="text-blue-400">🌬️</span>,
+      gradient: "",
+    },
+    {
       title: "Rainfall",
       value: `${weatherData.rainfall} mm`,
       description: "in last hour",
       icon: <span className="text-blue-400">🌧️</span>,
+      gradient: "",
+    },
+    {
+      title: "Visibility",
+      value: `${weatherData.visibility} km`,
+      icon: <span className="text-gray-400">👀</span>,
       gradient: "",
     },
   ];
@@ -74,7 +88,7 @@ const WeatherInfoList: React.FC<WeatherInfoListProps> = ({ weatherDetails }) => 
       <div className="grid grid-cols-2 gap-4">
         {weatherDetails.slice(1, 3).map((item, index) =>
           item.customComponent ? (
-            <div key={index} className="p-4 rounded-xl bg-indigo-800/40">{item.customComponent}</div>
+            <div key={index} className="p-4 rounded-xl bg-indigo-800/40 col-span-2">{item.customComponent}</div>
           ) : (
             <WeatherInfoCard key={index} {...item} />
           )
@@ -122,28 +136,28 @@ const SunriseSunsetArc: React.FC<SunriseSunsetProps> = ({ sunrise, sunset }) => 
   }, []);
 
   const isNight = currentMinutes < sunriseMinutes || currentMinutes > sunsetMinutes;
-  const progress = isNight
-    ? ((currentMinutes < sunriseMinutes ? 1440 - sunsetMinutes + currentMinutes : currentMinutes - sunsetMinutes) /
-      (1440 - (sunsetMinutes - sunriseMinutes)))
-    : (currentMinutes - sunriseMinutes) / (sunsetMinutes - sunriseMinutes);
+  const progress = Math.max(0, Math.min(
+    (currentMinutes - sunriseMinutes) / (sunsetMinutes - sunriseMinutes),
+    1
+  ));
 
-  const position = Math.max(0, Math.min(progress, 1)) * 180;
+  const position = progress * 300; // Breder maken
 
   return (
     <div className="relative flex flex-col items-center space-y-2">
       <h3 className="text-sm uppercase tracking-wider text-indigo-300">Sunrise & Sunset</h3>
-      <div className="relative w-40 h-20">
-        <svg viewBox="0 0 200 100" className="absolute inset-0">
-          <path d="M10,90 A90,90 0 0,1 190,90" fill="none" stroke={isNight ? "blue" : "orange"} strokeWidth="4" />
+      <div className="relative w-60 h-30">
+        <svg viewBox="0 0 300 400" className="absolute inset-0">
+          <path d="M10,160 A170,170 0 0,1 290,160" fill="none" stroke={isNight ? "blue" : "orange"} strokeWidth="4" />
         </svg>
         <motion.div
           className={`absolute w-6 h-6 rounded-full ${isNight ? "bg-blue-400" : "bg-yellow-400"}`}
-          style={{ left: `${10 + (position / 180) * 180}px`, bottom: "55px" }}
+          style={{ left: `${10 + position}px`, bottom: "80px" }}
           animate={{ y: [0, -10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         />
       </div>
-      <div className="flex justify-between w-40 text-sm text-gray-300">
+      <div className="flex justify-between w-60 text-sm text-gray-300">
         <span>{sunrise}</span>
         <span>{sunset}</span>
       </div>
